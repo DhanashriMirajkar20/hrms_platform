@@ -1,0 +1,10 @@
+package com.example.hrms_platform_document.repository;
+
+
+import com.example.hrms_platform_document.entity.DocumentVersion;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface DocumentVersionRepository extends JpaRepository<DocumentVersion, Long> {
+}
