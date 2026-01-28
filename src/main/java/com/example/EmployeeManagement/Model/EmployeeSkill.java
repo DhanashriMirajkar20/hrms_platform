@@ -9,16 +9,14 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+
 @Entity
 @Table(name = "employee_skill")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-//@JsonIdentityInfo(
-//        generator = ObjectIdGenerators.PropertyGenerator.class,
-//        property = "employeeSkillId"
-//)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "employeeSkillId")
 
 public class EmployeeSkill {
 

@@ -1,4 +1,8 @@
+
 package com.example.EmployeeManagement.Model;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -16,6 +20,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "employee")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "employeeId")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

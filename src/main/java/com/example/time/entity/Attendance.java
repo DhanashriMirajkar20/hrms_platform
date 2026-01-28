@@ -3,6 +3,7 @@ package com.example.time.entity;
 import com.example.EmployeeManagement.Model.Employee;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +14,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "attendance")
-@Getter @Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Attendance {

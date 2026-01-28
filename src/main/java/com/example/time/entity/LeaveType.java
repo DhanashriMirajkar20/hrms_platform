@@ -2,6 +2,7 @@ package com.example.time.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,7 +10,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "leave_type")
-@Getter @Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class LeaveType {
