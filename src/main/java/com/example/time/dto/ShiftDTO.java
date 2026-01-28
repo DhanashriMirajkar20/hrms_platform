@@ -1,12 +1,16 @@
 package com.example.time.dto;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalTime;
-
-@Getter @Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ShiftDTO {
 
     private Long shiftId;

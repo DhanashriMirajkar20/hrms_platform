@@ -2,6 +2,7 @@ package com.example.time.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,7 +10,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "holiday")
-@Getter @Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Holiday {

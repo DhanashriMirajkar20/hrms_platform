@@ -3,6 +3,7 @@ package com.example.time.entity;
 import com.example.EmployeeManagement.Model.Employee;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +12,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 @Entity
 @Table(name = "leave_request")
-@Getter @Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class LeaveRequest {

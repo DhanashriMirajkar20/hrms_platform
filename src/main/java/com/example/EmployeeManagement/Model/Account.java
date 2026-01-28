@@ -10,17 +10,14 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+
 @Entity
 @Table(name = "account")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
-//@JsonIdentityInfo(
-//        generator = ObjectIdGenerators.PropertyGenerator.class,
-//        property = "accountId"
-//)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "accountId")
 
 public class Account {
 

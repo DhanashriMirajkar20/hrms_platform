@@ -11,16 +11,14 @@ import lombok.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+
 @Entity
 @Table(name = "employee_manager_history")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-//@JsonIdentityInfo(
-//        generator = ObjectIdGenerators.PropertyGenerator.class,
-//        property = "historyId"
-//)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "historyId")
 
 public class EmployeeManagerHistory {
 
