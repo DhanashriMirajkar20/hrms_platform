@@ -35,9 +35,6 @@ public class EmployeePersonalController {
         return ResponseEntity.ok(empDto);
     }
 
-    @PostMapping("/{employeeId}/add-personal")
-    public ResponseEntity<EmployeePersonalDTO> addEmployeePersonalDetails(@PathVariable Long employeeId , @RequestBody EmployeePersonal employeePersonal){
-        EmployeePersonalDTO empDto = employeePersonalService.addEmployeePersonalDetails(employeeId,employeePersonal);
         return ResponseEntity.ok(empDto);
     }
 

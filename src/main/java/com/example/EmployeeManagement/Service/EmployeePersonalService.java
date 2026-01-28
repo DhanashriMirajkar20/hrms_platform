@@ -2,7 +2,6 @@ package com.example.EmployeeManagement.Service;
 
 import com.example.EmployeeManagement.DTO.EmployeePersonalDTO;
 import com.example.EmployeeManagement.Exception.EmployeeNotFoundException;
-import com.example.EmployeeManagement.Exception.EmployeePersonalExistsException;
 import com.example.EmployeeManagement.Exception.EmployeePersonalNotFoundException;
 import com.example.EmployeeManagement.Model.Employee;
 import com.example.EmployeeManagement.Model.EmployeePersonal;
@@ -49,16 +48,6 @@ public class EmployeePersonalService {
 //        }
         return mapToDto(employeePersonal);
     }
-
-    public EmployeePersonalDTO addEmployeePersonalDetails(Long employeeId , EmployeePersonal employeePersonal){
-
-        Employee emp = employeeRepository.findById(employeeId)
-                        .orElseThrow(() -> new EmployeeNotFoundException(employeeId));
-
-        employeePersonal.setEmployee(emp);
-        if (employeePersonalRepository.getByEmployeeId(employeeId).isPresent()) {
-            throw new EmployeePersonalExistsException(employeeId);
-        }
 
         employeePersonalRepository.save(employeePersonal);
         return mapToDto(employeePersonal);

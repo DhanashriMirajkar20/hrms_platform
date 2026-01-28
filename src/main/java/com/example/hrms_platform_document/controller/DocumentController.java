@@ -16,7 +16,6 @@ public class DocumentController {
     @Autowired
     private DocumentService documentService;
 
-    @PostMapping(path = "/upload" , consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> upload(
             @RequestPart("file") MultipartFile file,
             @RequestPart("documentName") String documentName,

@@ -1,6 +1,5 @@
 package com.example.hrms_platform_document.service;
 
-import com.example.EmployeeManagement.Exception.EmployeeNotFoundException;
 import com.example.EmployeeManagement.Model.Employee;
 import com.example.hrms_platform_document.util.ChecksumUtil;
 import com.example.EmployeeManagement.Repository.EmployeeRepository;
@@ -8,7 +7,6 @@ import com.example.hrms_platform_document.entity.Document;
 import com.example.hrms_platform_document.entity.DocumentVersion;
 import com.example.hrms_platform_document.repository.DocumentRepository;
 import com.example.hrms_platform_document.repository.DocumentVersionRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +16,6 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 @Service
-@AllArgsConstructor
 public class DocumentService {
 
     private DocumentRepository documentRepo;
@@ -42,7 +39,6 @@ public class DocumentService {
 
         Employee emp = employeeRepo.findById(employeeId)
                 .orElseThrow(() ->
-                        new EmployeeNotFoundException(employeeId)
                 );
 
         Document document = new Document();

@@ -1,6 +1,5 @@
 package com.example.EmployeeManagement.Model;
 
-import com.example.hrms_platform_document.entity.Document;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -112,13 +111,6 @@ public class Employee {
             fetch = FetchType.LAZY)
     private Set<Experience> employeeExperiences;
 
-//    @OneToMany(mappedBy = "employee",
-//                cascade = CascadeType.ALL,
-//                orphanRemoval = true,
-//                fetch = FetchType.LAZY
-//              )
-//    private Set<Document> documents;
-
 //    current manager of the employee
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "manager_id")
@@ -129,6 +121,4 @@ public class Employee {
     @OneToMany(mappedBy = "manager",
                fetch = FetchType.LAZY)
     private Set<Employee> subordinates;
-
-
 }
